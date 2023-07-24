@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import Banner from './components/Banner'
 import Filter from './components/Filter'
 import Category from './components/Category'
-import Products from './components/Products'
+import ProductItem from './components/ProductItem'
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
       <Banner />
       <Filter />
       <Category />
-      <Products productName={'Produk Baru'} />
+      <ProductItem />
     </main>
   )
 }
