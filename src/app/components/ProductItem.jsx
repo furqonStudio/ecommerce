@@ -9,7 +9,7 @@ const ProductItem = () => {
   return (
     <div className="w-[1250px] m-auto grid grid-cols-5 gap-4 ">
       {products.map((product) => (
-        <div className="card bg-base-100 drop-shadow-lg" key={product.id}>
+        <div className="card bg-base-100 shadow" key={product.id}>
           <figure>
             <Image
               src={product.image}
@@ -20,7 +20,7 @@ const ProductItem = () => {
             />
           </figure>
           <div className="p-4">
-            <h2 className="text-md font-semibold tracking-tight">
+            <h2 className="text-md tracking-tight">
               {product.title.length > 40
                 ? product.title.slice(0, 40) + '...'
                 : product.title}
