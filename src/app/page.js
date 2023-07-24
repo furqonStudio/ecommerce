@@ -1,7 +1,7 @@
 import Banner from './components/Banner'
 import Filter from './components/Filter'
 import Category from './components/Category'
-import ProductItem from './components/ProductItem'
+import Products from './components/Products'
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Banner />
       <Filter />
       <Category />
-      <ProductItem />
+      <Products />
     </main>
   )
 }

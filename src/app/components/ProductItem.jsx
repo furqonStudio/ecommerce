@@ -1,22 +1,24 @@
-'use client'
 import Image from 'next/image'
-import { useContext } from 'react'
-import { Context } from '../context/Context'
+import { useRouter } from 'next/navigation'
 
-const ProductItem = () => {
-  const products = useContext(Context)
+const ProductItem = ({ product }) => {
+  const router = useRouter()
 
   return (
     <div className="w-[1250px] m-auto grid grid-cols-5 gap-4 ">
-      {products.map((product) => (
-        <div className="card bg-base-100 shadow" key={product.id}>
+      {product.map((product) => (
+        <div
+          className="card bg-base-100 shadow"
+          key={product.id}
+          onClick={() => router.push('/product')}
+        >
           <figure>
             <Image
               src={product.image}
               alt="Shoes"
               width={200}
               height={200}
-              className="h-[200px] object-cover cover"
+              className="h-[200px] object-cover"
             />
           </figure>
           <div className="p-4">
